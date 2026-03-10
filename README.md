@@ -1,16 +1,46 @@
-# React + Vite
+# 🧠 Organizador Inteligente de Tareas
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Aplicación web que utiliza algoritmos de búsqueda heurística (BFS, Greedy y A*) para determinar el orden óptimo en que deberías realizar tus tareas del día.
 
-Currently, two official plugins are available:
+## ✨ ¿Qué hace?
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Ingresa tareas con nivel de prioridad, urgencia y duración
+- Genera un árbol de búsqueda visual e interactivo
+- Compara los 3 algoritmos lado a lado con métricas reales
+- Anima el recorrido de cada algoritmo paso a paso
 
-## React Compiler
+## 🚀 Cómo correrlo
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### Requisitos
+- [Node.js](https://nodejs.org) instalado (versión LTS)
 
-## Expanding the ESLint configuration
+### Pasos
+```bash
+# 1. Clona el repositorio
+git clone https://github.com/AdieltTpp/Organizador-tareas.git
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+# 2. Entra a la carpeta
+cd Organizador-tareas
+
+# 3. Instala dependencias
+npm install
+
+# 4. Corre el proyecto
+npm run dev
+```
+
+Abre tu navegador en **http://localhost:5173**
+
+## 🧩 Algoritmos implementados
+
+| Algoritmo | Tipo | Descripción |
+|-----------|------|-------------|
+| BFS | No informada | Explora nivel por nivel sin heurística |
+| Greedy | Heurística pura | Elige siempre la tarea con mayor (prioridad+urgencia)/duración |
+| A* | Heurística informada | Combina costo real acumulado + heurística |
+
+## 🛠️ Tecnologías
+
+- React + Vite
+- SVG para visualización del árbol
+- CSS-in-JS para estilos
